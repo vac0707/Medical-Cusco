@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-950: #0f172a;
+  --color-brand-900: #1e293b;
+  /* Red from logo - Medical Red */
+  --color-brand-500: #C8102E; 
+  --color-brand-600: #B00E29;
+  --color-brand-50: #fef2f2;
+  --color-brand-100: #fee2e2;
+
+  /* Trust Green - Secondary */
+  --color-accent-500: #059669;
+  --color-accent-50: #ecfdf5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-brand-900 bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-brand-950;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-900 to-brand-500;
+}
